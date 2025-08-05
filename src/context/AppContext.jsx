@@ -41,45 +41,45 @@ export const AppProvider = ({ children }) => {
   }, [originalImage]);
 
   const fetchRandomImage = async () => {
-    setIsLoading(true);
-    setError('');
-    setOriginalImage(null);
-    setEncodedImage(null);
-    setDecodedMessage('');
-    
-    try {
-      const response = await axios.get('https://picsum.photos/500/500', {
-        responseType: 'blob', // Important: specify blob response type
-        timeout: 10000, // 10 second timeout
-        headers: {
-          'Accept': 'image/*'
-        }
-      });
-      
-      // Create object URL from the blob response
-      const imageUrl = URL.createObjectURL(response.data);
-      setOriginalImage(imageUrl);
-      
-    } catch (err) {
-      // Handle different types of axios errors
-      if (err.code === 'ECONNABORTED') {
-        setError('Request timeout. Please check your internet connection and try again.');
-      } else if (err.response) {
-        // Server responded with error status
-        setError(`Server error: ${err.response.status}. Failed to fetch random image.`);
-      } else if (err.request) {
-        // Request was made but no response received
-        setError('Network error. Please check your internet connection and try again.');
-      } else {
-        // Something else happened
-        setError('Failed to fetch random image. Please try again or upload one manually.');
+  setIsLoading(true);
+  setError('');
+  setOriginalImage(null);
+  setEncodedImage(null);
+  setDecodedMessage('');
+  
+  try {
+    // Fetch a random waifu image
+    const response = await axios.get('https://api.waifu.im/search', {
+      timeout: 10000,
+      headers: {
+        'Accept': 'application/json'
       }
-      
-      console.error('Error fetching random image:', err);
-    } finally {
+    });
+
+    // Extract image URL from waifu.im API response
+    const imageUrl = response.data?.images?.[0]?.url;
+    if (!imageUrl) {
+      setError('Failed to fetch image from waifu.im.');
       setIsLoading(false);
+      return;
     }
-  };
+    setOriginalImage(imageUrl);
+
+  } catch (err) {
+    if (err.code === 'ECONNABORTED') {
+      setError('Request timeout. Please check your internet connection and try again.');
+    } else if (err.response) {
+      setError(`Server error: ${err.response.status}. Failed to fetch random image.`);
+    } else if (err.request) {
+      setError('Network error. Please check your internet connection and try again.');
+    } else {
+      setError('Failed to fetch random image. Please try again or upload one manually.');
+    }
+    console.error('Error fetching random image:', err);
+  } finally {
+    setIsLoading(false);
+  }
+};
   
   const handleImageUpload = useCallback((imageUrl) => {
     setOriginalImage(imageUrl);

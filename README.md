@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="path/to/your/logo.png" alt="Steganography Suite Logo" width="150"/>
+  
 
   # Steganography Suite
 

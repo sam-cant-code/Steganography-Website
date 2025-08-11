@@ -7,19 +7,13 @@
   </p>
 
   <p>
-    <a href="https://github.com/your-username/your-repo-name/blob/main/LICENSE">
-      <img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg"/>
-    </a>
-    <a href="https://github.com/your-username/your-repo-name">
-      <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/your-username/your-repo-name">
-    </a>
-    <a href="#">
-      <img alt="React" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-    </a>
-    <a href="#">
-      <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
-    </a>
-  </p>
+    <a href="#">
+      <img alt="React" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+    </a>
+    <a href="#">
+      <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
+    </a>
+  </p>
 </div>
 
 ---

@@ -8,9 +8,7 @@
   </p>
 
   <p>
-    <a href="#">
-      <img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg"/>
-    </a>
+    
     <a href="#">
       <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/your-username/your-repo-name">
     </a>

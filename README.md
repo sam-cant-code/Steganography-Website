@@ -27,12 +27,8 @@
 ## 📖 Table of Contents
 
 - [✨ Features](#-features)
-- [🖼️ Demo & Screenshots](#️-demo--screenshots)
 - [🛠️ Technologies Used](#️-technologies-used)
 - [🚀 Getting Started](#-getting-started)
-- [📂 Project Structure](#-project-structure)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
 
 ---
 
@@ -49,21 +45,6 @@
 
 ---
 
-## 🖼️ Demo & Screenshots
-
-Below is a GIF demonstrating the application's core functionality.
-
-![Steganography Suite Demo](path/to/your/demo.gif)
-
-### Screenshots
-
-<p align="center">
-  <img src="path/to/screenshot-1.png" alt="Encode Section Screenshot" width="48%">
-  &nbsp; &nbsp;
-  <img src="path/to/screenshot-2.png" alt="Decode Section Screenshot" width="48%">
-</p>
-
----
 
 ## 🛠️ Technologies Used
 
@@ -111,6 +92,4 @@ Make sure you have Node.js and npm installed on your machine.
 
 ---
 
-## 📂 Project Structure
 
-The project follows a standard React application structure, organizing files by feature and type.

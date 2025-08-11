@@ -1,12 +1,84 @@
-# React + Vite
+Steganography Suite
+This is a web application that allows you to hide a secret message within an image using steganography. You can also decode a message from an image that has a hidden message.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+Encode Message: Hide a text message within an image.
 
-Currently, two official plugins are available:
+Decode Message: Extract a hidden message from an image.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Fetch Random Image: Fetch a random image from an external API to use for encoding.
 
-## Expanding the ESLint configuration
+Image Uploader: Upload your own image for encoding or decoding.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Image Preview: See a preview of the original and encoded image.
+
+Download Encoded Image: Download the image with the hidden message.
+
+Technologies Used
+React
+
+Tailwind CSS
+
+Axios
+
+How to Run
+Clone the repository:
+
+Bash
+
+git clone <repository-url>
+Install the dependencies:
+
+Bash
+
+npm install
+Start the development server:
+
+Bash
+
+npm run dev
+Open your browser and navigate to http://localhost:3000
+
+Project Structure
+steganography-suite/
+|-- public/
+|-- src/
+|   |-- assets/
+|   |   `-- react.svg
+|   |-- components/
+|   |   |-- Button.jsx
+|   |   |-- DecodeSection.jsx
+|   |   |-- EncodeSection.jsx
+|   |   |-- ImagePreview.jsx
+|   |   |-- ImageUploader.jsx
+|   |   `-- MessageInput.jsx
+|   |-- context/
+|   |   `-- AppContext.jsx
+|   |-- utils/
+|   |   `-- stego.js
+|   |-- App.jsx
+|   |-- index.css
+|   `-- main.jsx
+|-- .gitignore
+|-- package.json
+|-- README.md
+File Descriptions
+src/main.jsx: The entry point of the React application.
+
+src/App.jsx: The main application component that sets up the layout and routing.
+
+src/context/AppContext.jsx: Manages the application's state using React's Context API.
+
+src/utils/stego.js: Contains the core steganography functions for encoding and decoding messages in images.
+
+src/components/EncodeSection.jsx: The component responsible for the UI and logic of encoding a message into an image.
+
+src/components/DecodeSection.jsx: The component responsible for the UI and logic of decoding a message from an image.
+
+src/components/ImagePreview.jsx: A reusable component for displaying image previews.
+
+src/components/ImageUploader.jsx: A component that allows users to upload images.
+
+src/components/Button.jsx: A reusable button component.
+
+src/components/MessageInput.jsx: A reusable text area for message input.

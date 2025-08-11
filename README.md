@@ -73,4 +73,48 @@ Make sure you have Node.js and npm installed:
 
 ```bash
 npm install npm@latest -g
+# 1. Clone the repository
+git clone https://github.com/your-username/your-repo-name.git
+
+# 2. Navigate to the project directory
+cd steganography-suite
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm run dev
+steganography-suite/
+├── public/
+├── src/
+│   ├── assets/              # Static assets like SVGs
+│   ├── components/          # Reusable React components
+│   │   ├── Button.jsx
+│   │   ├── DecodeSection.jsx
+│   │   ├── EncodeSection.jsx
+│   │   ├── ImagePreview.jsx
+│   │   ├── ImageUploader.jsx
+│   │   └── MessageInput.jsx
+│   ├── context/             # React Context for state management
+│   │   └── AppContext.jsx
+│   ├── utils/               # Core logic and helper functions
+│   │   └── stego.js
+│   ├── App.jsx              # Main app component
+│   ├── index.css            # Global styles & Tailwind imports
+│   └── main.jsx             # Application entry point
+├── .gitignore
+├── index.html
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+└── README.md
+
+This fixes:  
+✅ Proper alignment of header & badges in the center  
+✅ Clean project structure with code block formatting  
+✅ Removed broken nested `|` pipes in the original  
+✅ Ensured that all GitHub markdown renders correctly without HTML glitches  
+
+If you want, I can also make you a **dark-themed README style** with gradient section titles so it looks more premium on GitHub.
+
 

@@ -1,89 +1,100 @@
+# 🔐 StegoHide: A React-Based Steganography Tool
+
 <div align="center">
 
-  # Steganography Suite
+**Hide your secret messages in plain sight. This tool uses Least Significant Bit (LSB) steganography to embed text within images, with an optional layer of XOR encryption for robust security.**
 
-  <p>
-    A modern web application built with React that allows you to hide secret text messages within images using LSB (Least Significant Bit) steganography. You can encode your own messages or decode messages from images that have been previously encoded.
-  </p>
-
-  <p>
-    <a href="#">
-      <img alt="React" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-    </a>
-    <a href="#">
-      <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
-    </a>
-  </p>
 </div>
 
 ---
 
-## 📖 Table of Contents
+### Table of Contents
 
-- [✨ Features](#-features)
-- [🛠️ Technologies Used](#️-technologies-used)
-- [🚀 Getting Started](#-getting-started)
+-   [✨ Features](#-features)
+-   [🛠️ Tech Stack](#-tech-stack)
+-   [🚀 Getting Started](#-getting-started)
+-   [🔧 Usage](#-usage)
+-   [📜 License](#-license)
 
 ---
 
 ## ✨ Features
 
-* **Encode Messages**: Hide any text message within a PNG image. The message is embedded by modifying the least significant bits of the image's pixels.
-* **Decode Messages**: Extract hidden messages from steganographically encoded images.
-* **Random Image Fetcher**: Don't have an image? Fetch a random high-quality image from an online service to use as a cover image.
-* **Custom Image Upload**: Upload your own images (PNG, JPEG) to use for encoding or decoding.
-* **Image Previews**: Instantly see a preview of your original image and the newly encoded image.
-* **Download Functionality**: Download the encoded image to your device to share it.
-* **Responsive Design**: A clean, modern, and fully responsive user interface that works on all screen sizes, built with Tailwind CSS.
-* **Error Handling**: User-friendly error messages for common issues like messages being too long or failed image fetches.
+-   **Effective LSB Steganography**: Securely embeds messages directly into the pixel data of an image, ensuring they are visually undetectable.
+-   **Optional XOR Encryption**: Provides an additional security layer by encrypting messages with a secret key *before* they are hidden in the image.
+-   **Intuitive Dual-Panel UI**: A clean and modern interface with dedicated panels for both encoding and decoding operations, making the process straightforward.
+-   **Flexible Image Handling**: Gives you the choice to either upload your own local images or fetch a random image from an online source to use for encoding.
+-   **Live Image Previews**: Instantly view both your original and the newly encoded images side-by-side to confirm the process was successful.
+-   **Message Size Limiter**: A helpful character counter provides real-time feedback to ensure that your secret message will fit within the capacity of the selected image.
 
 ---
 
-
-## 🛠️ Technologies Used
+## 🛠️ Tech Stack
 
 This project is built with a modern frontend stack:
 
-* **[React](https://reactjs.org/)**: A JavaScript library for building user interfaces.
-* **[React Context API](https://reactjs.org/docs/context.html)**: Used for robust state management across the application.
-* **[Tailwind CSS](https://tailwindcss.com/)**: A utility-first CSS framework for rapid UI development.
-* **[Axios](https://axios-http.com/)**: A promise-based HTTP client for making requests to fetch random images.
-* **HTML5 Canvas**: Used for the low-level pixel manipulation required for steganography.
+-   **[React.js](https://reactjs.org/)**: A JavaScript library for building user interfaces.
+-   **[Tailwind CSS](https://tailwindcss.com/)**: A utility-first CSS framework for rapid UI development.
+-   **[React Context API](https://reactjs.org/docs/context.html)**: Used for efficient and clean state management across the application.
 
 ---
 
 ## 🚀 Getting Started
 
-To get a local copy up and running, follow these simple steps.
+To get a local copy of StegoHide up and running, please follow these simple steps.
 
 ### Prerequisites
 
-Make sure you have Node.js and npm installed on your machine.
-* **npm**
-    ```bash
-    npm install npm@latest -g
-    ```
+Ensure you have **Node.js** (which includes npm) installed on your system. You can download it from [nodejs.org](https://nodejs.org/).
 
 ### Installation
 
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/sam-cant-code/Steganography-Website
+1.  **Clone the repository to your local machine:**
+    ```sh
+    git clone [https://github.com/your-username/stegohide.git](https://github.com/your-username/stegohide.git)
     ```
-2.  Navigate to the project directory:
-    ```bash
-    cd Steganography-Website
+
+2.  **Navigate into the project directory:**
+    ```sh
+    cd stegohide
     ```
-3.  Install the dependencies:
-    ```bash
+
+3.  **Install the required NPM packages:**
+    ```sh
     npm install
     ```
-4.  Start the development server:
-    ```bash
+
+4.  **Run the application in development mode:**
+    ```sh
     npm run dev
     ```
-5.  Open your browser and navigate to `http://localhost:5173` (or the port specified in your terminal).
+    Once running, open your browser and navigate to `http://localhost:5173` to see the application live.
 
 ---
 
+## 🔧 Usage
 
+The application is divided into two main functions: hiding a message and revealing a message.
+
+### To Hide a Message (Encode)
+
+1.  Select the **Hide Message** tab from the sidebar.
+2.  Type your secret message in the provided text area.
+3.  **(Optional but Recommended)** Enter a secret key to encrypt your message.
+4.  Load an image by either clicking **🎲 Random** or **📁 Upload Image**.
+5.  Click the **📝 Hide** (or **🔐 Encrypt**) button to embed the message.
+6.  Your new, encoded image will appear in the "Encoded" preview box. Click **📥 Download** to save it.
+
+### To Reveal a Message (Decode)
+
+1.  Select the **Reveal Message** tab from the sidebar.
+2.  If the original message was encrypted, you **must** enter the same secret key used to encode it.
+3.  Click **📁 Upload Image** and select the image that contains the hidden message.
+4.  Click the **剥 Decode** button to extract the message.
+5.  The hidden message will be displayed in the results area below.
+
+---
+
+## 📜 License
+
+This project is distributed under the MIT License. See the `LICENSE` file for more information.

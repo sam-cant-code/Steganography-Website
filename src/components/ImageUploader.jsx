@@ -1,12 +1,6 @@
 import React, { useRef } from 'react';
 import Button from './Button';
 
-/**
- * A component for handling file uploads.
- * @param {object} props - Component props.
- * @param {function} props.onImageUpload - Callback function when an image is selected.
- * @param {boolean} props.disabled - Whether the upload button should be disabled.
- */
 const ImageUploader = ({ onImageUpload, disabled }) => {
   const fileInputRef = useRef(null);
 

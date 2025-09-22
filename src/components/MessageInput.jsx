@@ -1,11 +1,5 @@
 import React from 'react';
 
-/**
- * A text area for the user to input their secret message.
- * @param {object} props - Component props.
- * @param {string} props.value - The current value of the text area.
- * @param {function} props.onChange - Function to call when the text area value changes.
- */
 const MessageInput = ({ value, onChange }) => {
   return (
     <textarea

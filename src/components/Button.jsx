@@ -1,13 +1,5 @@
 import React from 'react';
 
-/**
- * A reusable, styled button component.
- * @param {object} props - Component props.
- * @param {function} props.onClick - The function to call when the button is clicked.
- * @param {boolean} [props.disabled=false] - Whether the button should be disabled.
- * @param {React.ReactNode} props.children - The content to display inside the button.
- * @param {string} [props.className] - Additional classes for styling.
- */
 const Button = ({ onClick, disabled = false, children, className = '' }) => {
   return (
     <button

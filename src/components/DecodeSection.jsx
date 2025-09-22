@@ -5,19 +5,19 @@ import ImageUploader from './ImageUploader';
 
 const DecodeSection = () => {
   const {
-    handleImageUpload,
+    handleImageUploadForDecode, // Use the new handler
     handleDecode,
     decodedMessage,
     isLoading,
-    hasImage,
+    imageToDecode, // Use the new state
   } = useAppContext();
 
   return (
     <div className="bg-gray-800 p-6 rounded-xl border border-gray-700 space-y-6">
       <h2 className="text-2xl font-bold text-cyan-400">Decode Message</h2>
       <div className="flex gap-4">
-        <ImageUploader onImageUpload={handleImageUpload} disabled={isLoading} />
-        <Button onClick={handleDecode} disabled={!hasImage || isLoading}>
+        <ImageUploader onImageUpload={handleImageUploadForDecode} disabled={isLoading} />
+        <Button onClick={handleDecode} disabled={!imageToDecode || isLoading}>
           Decode Message
         </Button>
       </div>

@@ -27,15 +27,20 @@ const EncodeSection = () => {
           Encode Message
         </Button>
       </div>
-      <div className="grid md:grid-cols-2 gap-6 mt-6">
-        <ImagePreview title="Original Image" imageUrl={originalImage} placeholderText="Fetch or upload an image" />
-        <ImagePreview title="Encoded Image" imageUrl={encodedImage} placeholderText="Your encoded image will appear here">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+        <div className="space-y-4">
+          <ImagePreview title="Original Image" imageUrl={originalImage} placeholderText="Fetch or upload an image" />
+        </div>
+        <div className="space-y-4">
+          <ImagePreview title="Encoded Image" imageUrl={encodedImage} placeholderText="Your encoded image will appear here" />
           {encodedImage && (
-            <a href={encodedImage} download="encoded-image.png">
-              <Button>Download Image</Button>
-            </a>
+            <div className="flex justify-center">
+              <a href={encodedImage} download="encoded-image.png">
+                <Button>Download Image</Button>
+              </a>
+            </div>
           )}
-        </ImagePreview>
+        </div>
       </div>
     </div>
   );

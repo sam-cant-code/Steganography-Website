@@ -27,7 +27,7 @@ const ImageUploader = ({ onImageUpload, disabled }) => {
         accept="image/png, image/jpeg"
       />
       <Button onClick={handleClick} disabled={disabled}>
-        Upload Image
+        📁 Upload Image
       </Button>
     </>
   );
